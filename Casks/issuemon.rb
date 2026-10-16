@@ -1,11 +1,11 @@
 cask "issuemon" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.1"
-  sha256 arm:   "8f1390582ca5fbd9584c8ae96943b2e234b2dce711b0d4d07472eb54b2a5be1d",
-         intel: "dabc9e8bd20d81cc89f5c3ca13b5a06b8aba69848bbc89c60f038dadb55edd39"
+  version "0.1.2"
+  sha256 arm:   "a3b0d132573c04c1fb8aec8da0c62f5aa1bf5226c5739b1a069fcfdfccae5a45",
+         intel: "1aef99ccd62498fcedbbccf2769ea68eedd10c44b13fce08a3b0c7fd003e87b3"
 
-  url "https://github.com/fundament-agency/issuemon/releases/download/v#{version}/issuemon-#{version}-#{arch}.zip"
+  url "https://github.com/fundament-agency/issuemon/releases/download/v#{version}/issuemon-#{version}-#{arch}.tar.xz"
   name "IssueMon"
   desc "Tracks Jira issues and reports what changed"
   homepage "https://github.com/fundament-agency/issuemon"
