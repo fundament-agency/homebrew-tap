@@ -18,7 +18,7 @@ brew trust --cask fundament-agency/tap/issuemon
 brew install --cask issuemon
 ```
 
-**First launch.** IssueMon is not notarized by Apple, so macOS blocks it once per install or upgrade. Open **System Settings → Privacy & Security**, scroll to "IssueMon was blocked…", click **Open Anyway** and confirm. Alternatively run `xattr -dr com.apple.quarantine /Applications/IssueMon.app`.
+**First launch.** IssueMon is signed ad hoc and not notarized by Apple, so macOS would block it after every install and upgrade. The cask removes the quarantine flag from the app after installing it, so IssueMon opens straight away. `brew upgrade` may warn that the signer changed and macOS may prompt: an ad-hoc signature changes with every build, and the flag is already gone. If macOS does block it, open **System Settings → Privacy & Security**, click **Open Anyway** next to "IssueMon was blocked…" and confirm, or run `xattr -dr com.apple.quarantine /Applications/IssueMon.app`.
 
 Upgrade, uninstall, and uninstall including your data and API token:
 

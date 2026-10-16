@@ -19,6 +19,15 @@ cask "issuemon" do
 
   app "IssueMon.app"
 
+  # IssueMon is signed ad hoc and not notarized, so Gatekeeper would block it after
+  # every install and upgrade. Remove the quarantine flag Homebrew sets on the app;
+  # if that fails, the app stays installed and macOS asks once, as before.
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/IssueMon.app"],
+        must_succeed: false
+  end
+
   zap trash: [
     "~/.issuemon",
     "~/Library/Application Support/IssueMon",
