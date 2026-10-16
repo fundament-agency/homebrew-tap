@@ -31,6 +31,6 @@ brew uninstall --zap --cask issuemon
 ## Maintenance
 
 - The cask in `Casks/issuemon.rb` is rewritten by the `update-cask` workflow in the app repository every time a GitHub release is published there: version and both `sha256` values. Do not edit those by hand unless the workflow failed.
-- The workflow pushes with a fine-grained personal access token (secret `TAP_PAT` in the app repository) that has contents read/write on this repository only.
+- The workflow pushes with a write-enabled deploy key of this repository; its private half is the `TAP_DEPLOY_KEY` secret in the app repository.
 - Until the first release is published, the checksums are placeholders and the cask cannot be installed.
 - Check a change locally with `brew style --fix --cask fundament-agency/tap/issuemon` and `brew audit --cask --online fundament-agency/tap/issuemon`, then run `brew developer off`.
