@@ -1,9 +1,9 @@
 cask "issuemon" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.0"
-  sha256 arm:   "14e9d4537db45429a1bcce8a15cc92e2a5af3a792439a953974dbdd1e2ac8ebf",
-         intel: "c1381cb8767a44ccfc6f18ba3da32639da119c2b5b0352d28497bee3061e81a4"
+  version "0.3.1"
+  sha256 arm:   "8095efc37d911a0bc631092802fcaa33dc46350f9bf8690fe9713c8596de86ea",
+         intel: "d55b643d7b9ac0c5468e58737c951d97eabfbc8daf924d682b04b7c4aa8e4459"
 
   url "https://github.com/fundament-agency/issuemon/releases/download/v#{version}/issuemon-#{version}-#{arch}.tar.xz"
   name "IssueMon"
